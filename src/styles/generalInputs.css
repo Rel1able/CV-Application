@@ -1,4 +1,4 @@
-.general-inputs{
+.general-inputs, .general-divs{
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -28,8 +28,4 @@ input{
     text-align: center;
     border: 2px solid;
     width: 100%;
-}
-
-.general-divs{
-    padding: 2rem;
 }
