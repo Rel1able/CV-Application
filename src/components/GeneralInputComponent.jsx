@@ -17,7 +17,9 @@ export default function GeneralInputComponent({ name, setName, email, setEmail, 
 
 
     return (
+        
         <div className="general-inputs">
+            <h1>General Information</h1>
             <label className="input-label">
                 Name:
                 <input type="text"
