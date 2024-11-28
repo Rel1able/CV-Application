@@ -36,3 +36,7 @@ button:hover{
     filter: invert(1);
     margin-right: 5px;
 }
+
+.display-data-container{
+    width: 100%;
+}

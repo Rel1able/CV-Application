@@ -1,13 +1,14 @@
 import GeneralInputComponent from "./GeneralInputComponent";
 import GeneralDisplayComponent from "./GeneralDIsplayComponent";
 import GeneralDivComponent from "./GeneralDivComponent";
+
 import { useState } from "react";
 
 export default function GeneralInfo() {
     const [isEditing, setIsEditing] = useState(true);
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [phone, setPhone] = useState("");
+    const [name, setName] = useState("Your Name");
+    const [email, setEmail] = useState("youremail@gmail.com");
+    const [phone, setPhone] = useState("444-444-444-444");
 
     return (
         <div className="general-info-container">
@@ -18,7 +19,8 @@ export default function GeneralInfo() {
                 : <GeneralDivComponent name={name}
                     email={email} phone={phone} setIsEditing={setIsEditing} />}
             
-            <GeneralDisplayComponent name={name} email={email} phone={phone}/>
+            <GeneralDisplayComponent name={name} email={email} phone={phone} />
+            
         </div>
     )
 }

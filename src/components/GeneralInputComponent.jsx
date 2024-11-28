@@ -1,4 +1,5 @@
 import "../styles/generalInputs.css";
+
 import Buttons from "./Buttons.jsx";
 export default function GeneralInputComponent({ name, setName, email, setEmail, phone, setPhone, setIsEditing}) {
 
@@ -15,7 +16,7 @@ export default function GeneralInputComponent({ name, setName, email, setEmail, 
     }
 
 
-
+ 
     return (
         
         <div className="general-inputs">
@@ -42,6 +43,7 @@ export default function GeneralInputComponent({ name, setName, email, setEmail, 
                     placeholder="Enter your phone number"/>
             </label>
             <Buttons setIsEditing={setIsEditing} />
+           
         </div>
     )
 }
