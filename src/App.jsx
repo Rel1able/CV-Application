@@ -4,10 +4,10 @@ import EduExpInput from "./components/EdExp.jsx";
 
 function App() {
   return (
-    <>
+    <main>
       <GeneralInfo />
-      <EduExpInput/>
-    </>
+      
+    </main>
   )
 }
 

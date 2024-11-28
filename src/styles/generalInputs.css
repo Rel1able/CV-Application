@@ -3,7 +3,6 @@
     flex-direction: column;
     gap: 2rem;
     text-align: center;
-    width: 40%;
     border: 2px solid;
     padding: 1rem;
 }
@@ -20,7 +19,11 @@ input{
 }
 
 .general-info-container{
+    margin-left: 25%;
+    width: 150%;
     display: flex;
+    justify-content: space-around;
+    gap: 25%;
 
 }
 

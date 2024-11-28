@@ -39,7 +39,7 @@ export default function GeneralInputComponent({ name, setName, email, setEmail, 
                 Phone:
                 <input type="tel"
                     onChange={handlePhoneChange}
-                    value={phone}
+                    value={phone} 
                     placeholder="Enter your phone number"/>
             </label>
             <Buttons setIsEditing={setIsEditing} />

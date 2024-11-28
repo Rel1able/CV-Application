@@ -37,6 +37,16 @@ button:hover{
     margin-right: 5px;
 }
 
-.display-data-container{
-    width: 100%;
+.display-data{
+    width: 250%;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.general-inputs{
+    width: 300px;
 }
