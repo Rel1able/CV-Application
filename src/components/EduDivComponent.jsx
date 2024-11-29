@@ -1,13 +1,10 @@
 import Buttons from "./Buttons.jsx";
 
-export default function EduDivComponent({setIsEditing, schoolName, titleOfStudy, startDate, endDate}) {
+export default function EduDivComponent({setIsEditing}) {
     return (
         <div className="general-divs">
-            <h1>Educational experience</h1>
-            <h3>School Name:<div>{schoolName}</div></h3>
-            <h3>Title of Study: <div>{titleOfStudy}</div></h3>
-            <h3>Start: {startDate}</h3>
-            <h3>End: {endDate}</h3>
+            <h1><img className="div-icon" src="../public/eduIcon.svg"/>Educational experience</h1>
+
             <Buttons setIsEditing={setIsEditing}/>
         </div>
     )

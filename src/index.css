@@ -41,9 +41,6 @@ button:hover{
     width: 30rem;
 }
 
-
-
-
 .general-inputs{
     width: 300px;
 }
@@ -53,4 +50,8 @@ button:hover{
     display: flex;
     flex-direction: column;
     gap: 3rem;
+}
+
+.div-icon{
+    width: 2.5rem;
 }
