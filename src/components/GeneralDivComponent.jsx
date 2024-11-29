@@ -10,3 +10,4 @@ export default function GeneralDivComponent({ name, email, phone, setIsEditing})
         </div>
     )
 }
+ 

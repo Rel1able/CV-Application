@@ -20,23 +20,23 @@ export default function EducationalInputComponent({setIsEditing, schoolName, set
     return (
         <div className="general-inputs">
             <h1>Educational experience</h1>
-            <label>
+            <label className="input-label">
                 School Name:
                 <input type="text" value={schoolName} onChange={handleSchoolNameChange}/>
             </label>
-            <label>
+            <label className="input-label">
                 Title of Study:
                 <input type="text" value={titleOfStudy} onChange={handleTitleOfStudyChange}/>
-            </label>
-            <label>
+            </label >
+            <label className="input-label">
                 Start
                 <input type="date" value={startDate} onChange={handleStartDateChange}/>
             </label>
-            <label>
+            <label className="input-label">
                 End
                 <input type="date" value={endDate} onChange={handleEndDateChange}/>
             </label>
             <Buttons setIsEditing={setIsEditing}/>
         </div>  
     )
-}
+} 

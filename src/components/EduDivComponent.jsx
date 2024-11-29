@@ -11,4 +11,4 @@ export default function EduDivComponent({setIsEditing, schoolName, titleOfStudy,
             <Buttons setIsEditing={setIsEditing}/>
         </div>
     )
-}
+} 

@@ -38,15 +38,19 @@ button:hover{
 }
 
 .display-data{
-    width: 250%;
+    width: 30rem;
 }
 
-main{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
+
 
 
 .general-inputs{
     width: 300px;
+}
+
+.inputs-data{
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }

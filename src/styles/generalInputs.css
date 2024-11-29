@@ -19,12 +19,13 @@ input{
 }
 
 .general-info-container{
-    margin-left: 25%;
-    width: 150%;
     display: flex;
     justify-content: space-around;
-    gap: 25%;
+}
 
+
+.display-data{
+    
 }
 
 .general-info-data{
