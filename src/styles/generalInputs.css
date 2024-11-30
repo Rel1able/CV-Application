@@ -1,13 +1,13 @@
 .general-inputs, .general-divs{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     text-align: center;
     box-shadow: 2px 2px 2px rgb(137, 137, 137);
     border: 1px solid;
     padding: 1rem;
-    width: 18rem;
-    padding: 1rem;
+    width: 28rem;
+
 }
 
 .input-label{
@@ -30,10 +30,8 @@ input{
 
 .general-info-data{
     text-align: center;
-    padding: 2rem;
-    flex: 1;
-    height: 200px;
-    background-color: #057f9d;
+    padding: 0.5rem;
+    background-color: var(--secondary-color);
 }
 
 .general-divs h3{

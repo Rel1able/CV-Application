@@ -17,9 +17,9 @@ import Header from "./Header.jsx";
 import { useState } from "react";
 
 export default function GeneralInfo() {
-    const [isEditing, setIsEditing] = useState(true);
-    const [isEditingEdu, setIsEditingEdu] = useState(true);
-    const [isEditingProf, setIsEditingProf] = useState(true);
+    const [isEditing, setIsEditing] = useState(false);
+    const [isEditingEdu, setIsEditingEdu] = useState(false);
+    const [isEditingProf, setIsEditingProf] = useState(false);
 
     const [name, setName] = useState("Your Name");
     const [email, setEmail] = useState("youremail@gmail.com");

@@ -1,8 +1,16 @@
+:root{
+    --main-color: #be185d;
+    --secondary-color: #98134a;
+}
+
+
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 *{
@@ -21,13 +29,13 @@ button{
     padding: 0.5rem;
     font-size: 1.2rem;
     color: white;
-    background-color: #0891b2;
+    background-color: var(--main-color);
     cursor: pointer;
     border: none;
 }
 
 button:hover{
-    background-color: #097e9b;
+    background-color: var(--secondary-color);
 }
 
 .icon{
@@ -39,10 +47,10 @@ button:hover{
 }
 
 .display-data{
-    width: 40rem;
+    width: 50rem;
     display: flex;
     flex-direction: column;
-
+    margin-bottom: 3rem;
 
 }
 
@@ -68,19 +76,20 @@ button:hover{
 
 .general-divs h1{
     display: flex;
-    gap: 0.8rem;
+    
     justify-content: space-between;;
     align-items: center;
 }
 
 .header{
     text-align: center;
-    color: #0891b2;
+    color: var(--main-color);
+    text-shadow: 1px 1px 1px var(--secondary-color);
 }
 
 .section-name{
-    background-color: #95b7ca;
+    background-color: var(--main-color);
     color: white;
     padding: 0.5rem;
-    border-radius: 1rem;
+
 }
