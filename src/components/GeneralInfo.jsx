@@ -25,15 +25,15 @@ export default function GeneralInfo() {
     const [email, setEmail] = useState("youremail@gmail.com");
     const [phone, setPhone] = useState("444-444-444-444");
   
-    const [schoolName, setSchoolName] = useState("br");
-    const [titleOfStudy, setTitleOfStudy] = useState("mr");
-    const [startDate, setStartDate] = useState("00/00/00");
-    const [endDate, setEndDate] = useState("00/00/00");
+    const [schoolName, setSchoolName] = useState("Harvard University");
+    const [titleOfStudy, setTitleOfStudy] = useState("Bachelor Computer Science");
+    const [startDate, setStartDate] = useState("09.11");
+    const [endDate, setEndDate] = useState("09.15");
 
-    const [company, setCompany] = useState("");
-    const [ jobTitle, setJobTitle]  = useState("");
-    const [profStartDate, setProfStartDate] = useState("00/00/00");
-    const [profEndDate, setProfEndDate] = useState("00/00/00");
+    const [company, setCompany] = useState("Google");
+    const [ jobTitle, setJobTitle]  = useState("Software Engineer");
+    const [profStartDate, setProfStartDate] = useState("01.16");
+    const [profEndDate, setProfEndDate] = useState("present");
 
     return (
         <>

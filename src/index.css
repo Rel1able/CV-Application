@@ -1,6 +1,6 @@
 :root{
-    --main-color: #be185d;
-    --secondary-color: #98134a;
+    --main-color: #16a34a;
+    --secondary-color: #11863c;
 }
 
 
@@ -92,4 +92,10 @@ button:hover{
     color: white;
     padding: 0.5rem;
 
+}
+
+.section-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

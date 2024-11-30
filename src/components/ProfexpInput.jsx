@@ -19,7 +19,7 @@ export default function ProfExpInputs({company, setCompany, jobTitle, setJobTitl
 
     return (
         <form className="general-inputs">
-            <h1>Professional Experience</h1>
+            <h1 className="section-icon"><img className="div-icon prof-icon" src="../public/jobExpIcon.svg" />Career</h1>
             <label className="input-label">
                 Company
                 <input type="text" value={company} onChange={handleCompanyChange}/>
@@ -29,12 +29,12 @@ export default function ProfExpInputs({company, setCompany, jobTitle, setJobTitl
                 <input type="text" value={jobTitle} onChange={handleJobTitleChange}/>
             </label>
             <label className="input-label">
-                Start
-                <input type="date" value={profStartDate} onChange={handleStartDate}/>
+                Start date
+                <input type="text" value={profStartDate} onChange={handleStartDate}/>
             </label>
             <label className="input-label">
-                End
-                <input type="date" value={profEndDate} onChange={handleEndDate}/>
+                End date
+                <input type="text" value={profEndDate} onChange={handleEndDate}/>
             </label>
             <SaveButton setIsEditing={setIsEditing} />
         </form>

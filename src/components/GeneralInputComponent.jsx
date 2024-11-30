@@ -20,7 +20,7 @@ export default function GeneralInputComponent({ name, setName, email, setEmail, 
     return (
         
         <form className="general-inputs">
-            <h1>General Information</h1>
+            <h1 name="section-icon"><img className="div-icon" src="../public/userIcon.svg"/>General Information</h1>
             <label className="input-label">
                 Name:
                 <input type="text"

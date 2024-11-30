@@ -20,22 +20,22 @@ export default function EducationalInputComponent({setIsEditing, schoolName, set
 
     return (
         <form className="general-inputs">
-            <h1>Educational experience</h1>
+            <h1 className="section-icon"><img  className="div-icon" src="../public/eduIcon.svg"/>Education</h1>
             <label className="input-label">
-                School Name:
+                School Name
                 <input type="text" value={schoolName} onChange={handleSchoolNameChange}/>
             </label>
             <label className="input-label">
-                Title of Study:
+                Degree
                 <input type="text" value={titleOfStudy} onChange={handleTitleOfStudyChange}/>
             </label >
             <label className="input-label">
-                Start
-                <input type="date" value={startDate} onChange={handleStartDateChange}/>
+                Start date
+                <input type="text" value={startDate} onChange={handleStartDateChange}/>
             </label>
             <label className="input-label">
-                End
-                <input type="date" value={endDate} onChange={handleEndDateChange}/>
+                End date
+                <input type="text" value={endDate} onChange={handleEndDateChange}/>
             </label>
             <SaveButton setIsEditing={setIsEditing}/>
         </form>  
