@@ -1,5 +1,8 @@
 .edu-display-content{
-    border: 2px solid;
 
+    border: 2px solid rgb(167, 167, 167);
+    border-top: 0px;
+    border-bottom: 0px;
     text-align: center;
+    padding: 2rem;
 }

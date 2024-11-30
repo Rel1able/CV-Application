@@ -1,6 +1,8 @@
 .profexp-display{
-    border: 2px solid;
+    border: 2px solid rgb(167, 167, 167);
+    border-top: 0px;
     text-align: center;
+    padding: 2rem;
 }
 
 .prof-icon{

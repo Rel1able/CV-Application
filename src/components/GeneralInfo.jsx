@@ -12,6 +12,8 @@ import ProfExpInput from "./ProfexpInput.jsx";
 import ProfExpDisplay from "./ProfExpDisplay.jsx";
 import ProfExpDiv from "./ProfExpDiv.jsx";
 
+import Header from "./Header.jsx";
+
 import { useState } from "react";
 
 export default function GeneralInfo() {
@@ -34,6 +36,8 @@ export default function GeneralInfo() {
     const [profEndDate, setProfEndDate] = useState("00/00/00");
 
     return (
+        <>
+            <Header/>
         <div className="general-info-container">
             <div className="inputs-data">
                 {isEditing ? <GeneralInputComponent name={name} setName={setName}
@@ -66,6 +70,8 @@ export default function GeneralInfo() {
             
 
         </div>
+        </>
+        
     )
 } 
 

@@ -3,7 +3,7 @@ import "../styles/edu.css"
 export default function EduDisplayComponent({ schoolName, titleOfStudy, startDate, endDate }) {
     return (
         <div className="edu-display-content">
-            <h1>Education</h1>
+            <h1 className="section-name">Education</h1>
             <h2>School {schoolName}</h2>
             <h2>Title {titleOfStudy}</h2>
             <h2>from {startDate} -  to {endDate}</h2>
