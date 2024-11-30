@@ -55,3 +55,14 @@ button:hover{
 .div-icon{
     width: 2.5rem;
 }
+
+.swap-icon{
+    width: 3rem;
+}
+
+.general-divs h1{
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    align-items: center;
+}

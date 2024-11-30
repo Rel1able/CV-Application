@@ -1,6 +1,6 @@
 import "../styles/generalInputs.css";
+import SaveButton from "./SaveButton.jsx";
 
-import Buttons from "./Buttons.jsx";
 export default function GeneralInputComponent({ name, setName, email, setEmail, phone, setPhone, setIsEditing}) {
 
     function handleNameChange(e) {
@@ -19,7 +19,7 @@ export default function GeneralInputComponent({ name, setName, email, setEmail, 
  
     return (
         
-        <div className="general-inputs">
+        <form className="general-inputs">
             <h1>General Information</h1>
             <label className="input-label">
                 Name:
@@ -42,8 +42,8 @@ export default function GeneralInputComponent({ name, setName, email, setEmail, 
                     value={phone} 
                     placeholder="Enter your phone number"/>
             </label>
-            <Buttons setIsEditing={setIsEditing} />
+            <SaveButton setIsEditing={setIsEditing} />
            
-        </div>
+        </form>
     )
 }

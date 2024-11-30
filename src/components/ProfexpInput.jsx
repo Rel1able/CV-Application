@@ -1,4 +1,4 @@
-import Buttons from "./Buttons.jsx"
+import SaveButton from "./SaveButton.jsx";
 
 export default function ProfExpInputs({company, setCompany, jobTitle, setJobTitle, profStartDate,setProfStartDate, profEndDate, setProfEndDate, setIsEditing}) {
     function handleCompanyChange(e) {
@@ -36,7 +36,7 @@ export default function ProfExpInputs({company, setCompany, jobTitle, setJobTitl
                 End
                 <input type="date" value={profEndDate} onChange={handleEndDate}/>
             </label>
-            <Buttons setIsEditing={setIsEditing} />
+            <SaveButton setIsEditing={setIsEditing} />
         </form>
         
     )

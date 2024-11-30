@@ -1,5 +1,6 @@
 
-import Buttons from "./Buttons.jsx";
+import SaveButton from "./SaveButton.jsx";
+
 export default function EducationalInputComponent({setIsEditing, schoolName, setSchoolName, titleOfStudy, setTitleOfStudy, startDate, setStartDate, endDate, setEndDate }) {
     function handleSchoolNameChange(e) {
         setSchoolName(e.target.value);
@@ -18,7 +19,7 @@ export default function EducationalInputComponent({setIsEditing, schoolName, set
     }
 
     return (
-        <div className="general-inputs">
+        <form className="general-inputs">
             <h1>Educational experience</h1>
             <label className="input-label">
                 School Name:
@@ -36,7 +37,7 @@ export default function EducationalInputComponent({setIsEditing, schoolName, set
                 End
                 <input type="date" value={endDate} onChange={handleEndDateChange}/>
             </label>
-            <Buttons setIsEditing={setIsEditing}/>
-        </div>  
+            <SaveButton setIsEditing={setIsEditing}/>
+        </form>  
     )
 } 

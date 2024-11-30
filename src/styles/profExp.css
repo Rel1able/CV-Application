@@ -2,3 +2,8 @@
     border: 2px solid;
     text-align: center;
 }
+
+.prof-icon{
+    position: relative;
+    bottom: 0.2rem;
+}
