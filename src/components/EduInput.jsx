@@ -1,5 +1,6 @@
 
 import SaveButton from "./SaveButton.jsx";
+import CloseButton from "./CloseButton.jsx";
 
 export default function EducationalInputComponent({setIsEditing, schoolName, setSchoolName, titleOfStudy, setTitleOfStudy, startDate, setStartDate, endDate, setEndDate }) {
     function handleSchoolNameChange(e) {
@@ -20,22 +21,22 @@ export default function EducationalInputComponent({setIsEditing, schoolName, set
 
     return (
         <form className="general-inputs">
-            <h1 className="section-icon"><img  className="div-icon" src="../public/eduIcon.svg"/>Education</h1>
+            <h1 className="section-icon"><img className="div-icon" src="../public/eduIcon.svg" />Education<CloseButton setIsEditing={setIsEditing}/></h1>
             <label className="input-label">
                 School Name
-                <input type="text" value={schoolName} onChange={handleSchoolNameChange}/>
+                <input type="text" value={schoolName} onChange={handleSchoolNameChange} placeholder="Enter the name of the school"/>
             </label>
             <label className="input-label">
                 Degree
-                <input type="text" value={titleOfStudy} onChange={handleTitleOfStudyChange}/>
+                <input type="text" value={titleOfStudy} onChange={handleTitleOfStudyChange} placeholder="Enter your degree"/>
             </label >
             <label className="input-label">
                 Start date
-                <input type="text" value={startDate} onChange={handleStartDateChange}/>
+                <input type="text" value={startDate} onChange={handleStartDateChange} placeholder="Enter the start date"/>
             </label>
             <label className="input-label">
                 End date
-                <input type="text" value={endDate} onChange={handleEndDateChange}/>
+                <input type="text" value={endDate} onChange={handleEndDateChange} placeholder="Enter the end date"/>
             </label>
             <SaveButton setIsEditing={setIsEditing}/>
         </form>  

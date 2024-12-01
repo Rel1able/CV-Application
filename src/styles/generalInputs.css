@@ -46,3 +46,9 @@ input{
     font-size: 16px;
     margin-top: 10px;
 }
+
+.general-icons{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}

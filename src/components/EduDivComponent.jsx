@@ -2,6 +2,7 @@
 import SwapButton from "./SwapButton.jsx";
 
 
+
 export default function EduDivComponent({setIsEditing}) {
     return (
         <div className="general-divs">

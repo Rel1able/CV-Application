@@ -5,7 +5,7 @@ export default function SaveButton({ setIsEditing }) {
         setIsEditing(false);
     }
     return (
-        <button onClick={handleSave}>
+        <button className="save-button" onClick={handleSave}>
             Save
         </button>
     )

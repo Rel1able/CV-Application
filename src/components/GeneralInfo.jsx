@@ -24,6 +24,7 @@ export default function GeneralInfo() {
     const [name, setName] = useState("Your Name");
     const [email, setEmail] = useState("youremail@gmail.com");
     const [phone, setPhone] = useState("444-444-444-444");
+    const [address, setAddress] = useState("City Street 4");
   
     const [schoolName, setSchoolName] = useState("Harvard University");
     const [titleOfStudy, setTitleOfStudy] = useState("Bachelor Computer Science");
@@ -40,12 +41,13 @@ export default function GeneralInfo() {
             <Header/>
         <div className="general-info-container">
             <div className="inputs-data">
-                {isEditing ? <GeneralInputComponent name={name} setName={setName}
-                email={email} setEmail={setEmail}
-                phone={phone} setPhone={setPhone}
-                setIsEditing={setIsEditing} />
-                : <GeneralDivComponent name={name}
-                        email={email} phone={phone} setIsEditing={setIsEditing} />}
+                    {isEditing ? <GeneralInputComponent name={name} setName={setName}
+                        email={email} setEmail={setEmail}
+                        phone={phone} setPhone={setPhone}
+                        setIsEditing={setIsEditing} address={address} setAddress={setAddress} />
+                        : <GeneralDivComponent name={name}
+                            email={email} phone={phone} setIsEditing={setIsEditing} address={address}
+                            setAddress={setAddress} />}
                 
                 {isEditingEdu ? <EducationalInputComponent schoolName={schoolName}
                 setSchoolName={setSchoolName} titleOfStudy={titleOfStudy}
@@ -63,13 +65,13 @@ export default function GeneralInfo() {
                 
             </div>
             <div className="display-data">
-                <GeneralDisplayComponent name={name} email={email} phone={phone} />
+                <GeneralDisplayComponent name={name} email={email} phone={phone} address={address} />
                 <EduDisplayComponent schoolName={schoolName} titleOfStudy={titleOfStudy} startDate={startDate} endDate={endDate} />
                 <ProfExpDisplay company={company} jobTitle={jobTitle} profStartDate={profStartDate} profEndDate={profEndDate}/>
             </div>
             
-
-        </div>
+            
+            </div>
         </>
         
     )

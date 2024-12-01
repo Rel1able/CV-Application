@@ -54,9 +54,7 @@ button:hover{
 
 }
 
-.general-inputs{
-    width: 18rem;
-}
+
 
 .inputs-data{
     margin-left: 5rem;
@@ -74,12 +72,15 @@ button:hover{
     filter: invert(1);
 }
 
-.general-divs h1{
+.general-divs h1, .general-inputs h1{
     display: flex;
     
     justify-content: space-between;;
     align-items: center;
 }
+
+
+
 
 .header{
     text-align: center;
@@ -91,6 +92,7 @@ button:hover{
     background-color: var(--main-color);
     color: white;
     padding: 0.5rem;
+    font-size: 1.2rem;
 
 }
 
@@ -99,3 +101,10 @@ button:hover{
     justify-content: space-between;
     align-items: center;
 }
+
+.save-button{
+    width: 5rem;
+    height: 2.5rem;
+    margin: auto;
+}
+
