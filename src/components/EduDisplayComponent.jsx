@@ -6,10 +6,10 @@ export default function EduDisplayComponent({ schoolName, titleOfStudy, startDat
             <h2 className="section-name">Education</h2>
 
             <div className="edu-line1">
-                <h4>{startDate} - {endDate}</h4>
+                <h4 className="date">{startDate} - {endDate}</h4>
                 <div>
-                    <h4>{schoolName}</h4>
-                <h4>{titleOfStudy}</h4>
+                    <h4 className="school-name">{schoolName}</h4>
+                    <h4 className="title-of-study">{titleOfStudy}</h4>
                 </div>
                  
             </div>

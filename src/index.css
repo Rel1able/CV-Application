@@ -14,7 +14,7 @@ body{
 }
 
 *{
-    font-family: Arial, sans-serif;
+    font-family:  Arial, sans-serif;
 }
 
 input{
@@ -107,4 +107,15 @@ button:hover{
     height: 2.5rem;
     margin: auto;
 }
+
+.school-name, .company-name{
+    font-size: 1.4rem;
+
+}
+
+
+.job-title, .title-of-study, .date{
+    font-weight: normal;
+}
+
 
