@@ -1,5 +1,5 @@
 .edu-display-content{
-    height: 7rem;
+   
     border: 2px solid rgb(167, 167, 167);
     border-top: 0px;
     border-bottom: 0px;
@@ -13,4 +13,17 @@
     justify-content: space-between;
     align-items: center;
     margin-left: 0.5rem;
+}
+
+
+.edu-input-header{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.plus-icon{
+    filter: invert(1);
+    width: 2rem;
+    height: 2rem;
 }
