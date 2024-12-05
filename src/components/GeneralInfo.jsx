@@ -37,7 +37,7 @@ export default function GeneralInfo() {
     const [profStartDate, setProfStartDate] = useState("01.16");
     const [profEndDate, setProfEndDate] = useState("present");
 
-    const [educations, setEducations] = useState([{schoolName: "Harvard University", Degree: "Bachelor Computer Science", startDate: "01.12.2024", endDate: "01.12.2028"}]);
+    const [educations, setEducations] = useState([{schoolName: "Harvard University", titleOfStudy: "Bachelor Computer Science", startDate: "01.12.2024", endDate: "01.12.2028"}]);
 
 
     return (
