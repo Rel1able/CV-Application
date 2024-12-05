@@ -38,7 +38,7 @@ export default function GeneralInfo() {
     const [profEndDate, setProfEndDate] = useState("present");
 
     const [educations, setEducations] = useState([{schoolName: "Harvard University", titleOfStudy: "Bachelor Computer Science", startDate: "01.12.2024", endDate: "01.12.2028"}]);
-
+    const [experiences, setExperiences] = useState([{ company: "Google", jobTitle: "Software Engineer", profStartDate: "01.16", profEndDate: "present" }]);
 
     return (
         <>
@@ -64,17 +64,17 @@ export default function GeneralInfo() {
                     titleOfStudy={titleOfStudy} startDate={startDate} endDate={endDate}
                         setIsEditing={setIsEditingEdu} />}
                 
-                {isEditingProf ? <ProfExpInput company={company} setCompany={setCompany} jobTitle={jobTitle}
-                    setJobTitle={setJobTitle} profStartDate={profStartDate} setProfStartDate={setProfStartDate} profEndDate={profEndDate}
-                        setProfEndDate={setProfEndDate} setIsEditing={setIsEditingProf} />
+                    {isEditingProf ? <ProfExpInput company={company} setCompany={setCompany} jobTitle={jobTitle}
+                        setJobTitle={setJobTitle} profStartDate={profStartDate} setProfStartDate={setProfStartDate} profEndDate={profEndDate}
+                        setProfEndDate={setProfEndDate} setIsEditing={setIsEditingProf} experiences={experiences} setExperiences={setExperiences} />
                         
                     : <ProfExpDiv setIsEditing={setIsEditingProf} />}
                 
             </div>
             <div className="display-data">
                 <GeneralDisplayComponent name={name} email={email} phone={phone} address={address} />
-                    <EduDisplayComponent educations={educations} />
-                <ProfExpDisplay company={company} jobTitle={jobTitle} profStartDate={profStartDate} profEndDate={profEndDate}/>
+                <EduDisplayComponent educations={educations} />
+                    <ProfExpDisplay experiences={experiences} />
             </div>
             
             

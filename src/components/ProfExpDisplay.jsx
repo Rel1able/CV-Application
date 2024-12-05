@@ -1,16 +1,22 @@
 import "../styles/profExp.css"
 
-export default function ProfExpDisplayComponent({company, jobTitle, profStartDate, profEndDate}) {
+export default function ProfExpDisplay({experiences}) {
     return (
         <div className="profexp-display">
             <h2 className="section-name">Career</h2>
-            <div className="profExp-line">
-                <h4 className="date">{profStartDate} - {profEndDate}</h4>
-                <div>
-                    <h4 className="company-name">{company}</h4>
-                    <h4 className="job-title">{jobTitle}</h4>
+            {experiences.map((experience, index) => (
+                <div key={index} className="profExp-line">
+                    <h4 className="date">{experience.profStartDate} - {experience.profEndDate}</h4>
+                    <div>
+                        <h4 className="company-name">{experience.company}</h4>
+                        <h4 className="job-title">{experience.jobTitle}</h4>
+                    </div>
                 </div>
-            </div>
+            ))}
+
+
+
+            
             
             
         </div>
