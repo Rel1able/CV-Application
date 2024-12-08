@@ -13,6 +13,10 @@ import ProfExpInput from "./ProfexpInput.jsx";
 import ProfExpDisplay from "./ProfExpDisplay.jsx";
 import ProfExpDiv from "./ProfExpDiv.jsx";
 
+import SkillsDisplay from "./SkillsDIsplay.jsx";
+import SkillsDivComp from "./SkillsDiv.jsx";
+import SkillsInput from "./SkillsInput.jsx";
+
 import Header from "./Header.jsx";
 
 import { useState } from "react";
@@ -39,6 +43,10 @@ export default function GeneralInfo() {
 
     const [educations, setEducations] = useState([{schoolName: "Harvard University", titleOfStudy: "Bachelor Computer Science", startDate: "01.12.2024", endDate: "01.12.2028"}]);
     const [experiences, setExperiences] = useState([{ company: "Google", jobTitle: "Software Engineer", profStartDate: "01.16", profEndDate: "present" }]);
+
+    const [skillName, setSkillName] = useState("");
+    const [skills, setSkills] = useState(["Html", "Css", "JAva Script"]);
+    const [isEditingSkills, setIsEditingSkills] = useState(false);
 
     return (
         <>
@@ -68,13 +76,19 @@ export default function GeneralInfo() {
                         setJobTitle={setJobTitle} profStartDate={profStartDate} setProfStartDate={setProfStartDate} profEndDate={profEndDate}
                         setProfEndDate={setProfEndDate} setIsEditing={setIsEditingProf} experiences={experiences} setExperiences={setExperiences} />
                         
-                    : <ProfExpDiv setIsEditing={setIsEditingProf} />}
+                        : <ProfExpDiv setIsEditing={setIsEditingProf} />}
+                    
+                    {isEditingSkills ? <SkillsInput skills={skills} setSkills={setSkills} skillName={skillName} setSkillName={setSkillName}
+                        setIsEditing={setIsEditingSkills} />
+                        :  <SkillsDivComp setIsEditing={setIsEditingSkills}/>}
+                    
                 
             </div>
             <div className="display-data">
                 <GeneralDisplayComponent name={name} email={email} phone={phone} address={address} />
                 <EduDisplayComponent educations={educations} />
-                    <ProfExpDisplay experiences={experiences} />
+                <ProfExpDisplay experiences={experiences} />
+                <SkillsDisplay skills={skills}/>
             </div>
             
             

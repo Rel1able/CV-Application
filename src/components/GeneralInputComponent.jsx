@@ -1,5 +1,5 @@
 import "../styles/generalInputs.css";
-import SaveButton from "./SaveButton.jsx";
+
 import CloseButton from "./CloseButton.jsx";
 
 export default function GeneralInputComponent({ name, setName, email, setEmail, phone, setPhone, setIsEditing, address, setAddress}) {
@@ -20,6 +20,9 @@ export default function GeneralInputComponent({ name, setName, email, setEmail, 
         setAddress(e.target.value);
     }
 
+    function handleSave() {
+        setIsEditing(false);
+    }
 
  
     return (
@@ -54,7 +57,7 @@ export default function GeneralInputComponent({ name, setName, email, setEmail, 
                     value={address}
                     placeholder="Enter your address"/>
             </label>
-            <SaveButton setIsEditing={setIsEditing} />
+            <button onClick={handleSave}>Save</button>
            
         </form>
     )
