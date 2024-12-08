@@ -43,6 +43,10 @@ export default function EducationalInputComponent({ setIsEditing, schoolName, se
             setEducations([...educations, newEducation])
         }
         setFormVisible(false);
+        setSchoolName("");
+        setTitleOfStudy("");
+        setStartDate("");
+        setEndDate("");
     
     }
 
@@ -55,17 +59,26 @@ export default function EducationalInputComponent({ setIsEditing, schoolName, se
         setEndDate(education.endDate);
         setFormVisible(true);
     }
+
+    function handleDelete(index) {
+        let filtered = educations.filter((_, i) => {
+            i !== index;
+        })
+        setEducations([...filtered]);
+    }
     
         return (
-            <div>
+            <div className="edu-form">
                 <div className="edu-input-header">
-                    <h2>Education</h2>
-                    <button onClick={toggleForm}><img className="plus-icon" src="../public/plusIcon.svg" /></button>
-                    <CloseButton setIsEditing={setIsEditing} />
+                    <h2><img className="edu-icon" src="../public/eduIcon.svg" />Education</h2>
+                    <div className="edu-header-btns">
+                        <button onClick={toggleForm}><img className="edu-plus-icon" src="../public/plusIcon.svg" /></button>
+                        <CloseButton setIsEditing={setIsEditing} />
+                    </div>
+                    
                 </div>
                 {formVisible && (
-                    <form className="general-inputs">
-                        <h1 className="section-icon"><img className="div-icon" src="../public/eduIcon.svg" />Education</h1>
+                    <form className="edu-inputs">
                         <label className="input-label">
                             School Name
                             <input type="text" value={schoolName} onChange={handleSchoolNameChange} placeholder="Enter the name of the school" />
@@ -82,17 +95,20 @@ export default function EducationalInputComponent({ setIsEditing, schoolName, se
                             End date
                             <input type="text" value={endDate} onChange={handleEndDateChange} placeholder="Enter the end date" />
                         </label>
-                        <button onClick={handleSave}>Save</button>
+                        <button className="save-button" onClick={handleSave}>Save</button>
                     </form>
                 )}
-
-                <ul>
+                {educations.length !== 0 && 
+                    <ul className="edu-items-container">
                     {educations.map((education, index) =>
-                        <li key={index}>
-                            {education.schoolName}
+                        <li className="edu-items" key={index}>
+                            <div className="edu-item-name">{education.schoolName}</div>
                             <button onClick={() => handleEdit(index)}>Edit</button>
+                            <button onClick={() => handleDelete(index)}>Del</button>
                         </li>)}
                 </ul>
+                }
+                
             </div>
             
         )
