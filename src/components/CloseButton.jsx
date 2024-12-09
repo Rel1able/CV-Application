@@ -1,7 +1,11 @@
-export default function CloseButton({ setIsEditing }){
+export default function CloseButton({ setIsEditing, setSchoolName, setTitleOfStudy, setStartDate, setEndDate }){
     
     function handleClose() {
         setIsEditing(false);
+        setSchoolName("");
+        setTitleOfStudy("");
+        setStartDate("");
+        setEndDate("");
     }
 
     return (

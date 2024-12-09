@@ -1,5 +1,5 @@
 
-import CloseButton from "./CloseButton.jsx";
+
 
 import { useState } from "react";
 
@@ -16,7 +16,22 @@ export default function EducationalInputComponent({ setIsEditing, schoolName, se
     }
 
     function toggleForm() {
-        setFormVisible(!formVisible)
+        if (editingIndex !== null) {
+            setSchoolName("");
+            setTitleOfStudy("");
+            setStartDate("");
+            setEndDate("");
+            setEditingIndex(null);
+        } else {
+            if (!formVisible) {
+                setSchoolName("");
+                setTitleOfStudy("");
+                setStartDate("");
+                setEndDate("");
+                setEditingIndex(null);
+            }
+            setFormVisible(!formVisible)
+        }
     }
 
     function handleTitleOfStudyChange(e) {
@@ -29,6 +44,15 @@ export default function EducationalInputComponent({ setIsEditing, schoolName, se
 
     function handleEndDateChange(e) {
         setEndDate(e.target.value);
+    }
+
+    function handleClose() {
+        setIsEditing(false);
+        setFormVisible(false);
+        setSchoolName("");
+        setTitleOfStudy("");
+        setStartDate("");
+        setEndDate("");
     }
 
     function handleSave() {
@@ -73,7 +97,7 @@ export default function EducationalInputComponent({ setIsEditing, schoolName, se
                     <h2><img className="edu-icon" src="../public/eduIcon.svg" />Education</h2>
                     <div className="edu-header-btns">
                         <button onClick={toggleForm}><img className="edu-plus-icon" src="../public/plusIcon.svg" /></button>
-                        <CloseButton setIsEditing={setIsEditing} />
+                        <button onClick={handleClose}><img className="swap-icon" src="../public/closeIcon.svg"/></button>
                     </div>
                     
                 </div>

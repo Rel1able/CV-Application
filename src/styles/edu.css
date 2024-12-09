@@ -31,7 +31,7 @@
     display: flex;
     gap: 1rem;
     position: relative;
-    left: 2.2rem;
+    left: 2.8rem;
 }
 
 .edu-items-container{
@@ -52,7 +52,7 @@
     border-right: 1px solid;
     border-left: 1px solid;
     padding: 1rem;
-    width: 28rem;
+    width: 30rem;
 
 }
 
