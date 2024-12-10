@@ -1,4 +1,3 @@
-import CloseButton from "./CloseButton.jsx";
 
 export default function SkillsInput({ skills, setSkills, skillName, setSkillName, setIsEditing }) {
 
@@ -18,16 +17,34 @@ export default function SkillsInput({ skills, setSkills, skillName, setSkillName
         setSkills([...filtered]);
     }
 
+    function handleClose() {
+        setIsEditing(false);
+    }
+
     return (
         <form>
-            <h1>Skills<CloseButton setIsEditing={setIsEditing} /></h1>
-            <label>
-                Skill Name
-                <input value={skillName} type="text" placeholder="enter your skill" onChange={handleInputChange} />
-                <button onClick={handleAdd}>Add</button>
+            <div className="skills-header">
+                <img className="mini-icon" src="../public/tools.svg"/>
+                 <h1>Skills</h1>
+                 <button className="close-skills" onClick={handleClose}><img className="swap-icon" src="../public/closeIcon.svg"/></button>
+            </div>
+           
+            <label className="skills-data-container">
+                <h1>Skill</h1>
+                <input value={skillName} type="text" placeholder="Enter the skill namel" onChange={handleInputChange} />
+                <button className="plus-btn" onClick={handleAdd}><img className="plus-icon" src="../public/plusIcon.svg" /></button>
             </label>
-            {skills.map((skill, index) =>
-                <li key={index}>{skill}<button onClick={(e) => handleDelete(e, index) }>Del</button></li> )}
+            <ul className="skills-container">
+                {skills.map((skill, index) =>
+                    <li className="skill-item" key={index}>
+                        <div className="skill-name">{skill}</div>
+                        <div className="skills-del-button">
+                            <button className="delete-btn skill-del" onClick={(e) => handleDelete(e, index)}><img className="edu-del-icon" src="../public/trashCan.svg"/></button>
+                        </div>
+                        
+                    </li>)}
+            </ul>
+            
         </form>
     )
 }
