@@ -94,9 +94,10 @@ export default function EducationalInputComponent({ setIsEditing, schoolName, se
         return (
             <div className="edu-form">
                 <div className="edu-input-header">
-                    <h2><img className="edu-icon" src="../public/eduIcon.svg" />Education</h2>
-                    <div className="edu-header-btns">
-                        <button onClick={toggleForm}><img className="edu-plus-icon" src="../public/plusIcon.svg" /></button>
+                    <img className="mini-icon" src="../public/eduIcon.svg" />
+                    <h2>Education</h2>
+                    <div className="header-btns">
+                        <button className="plus-btn" onClick={toggleForm}><img className="plus-icon" src="../public/plusIcon.svg" /></button>
                         <button onClick={handleClose}><img className="swap-icon" src="../public/closeIcon.svg"/></button>
                     </div>
                     
@@ -123,12 +124,16 @@ export default function EducationalInputComponent({ setIsEditing, schoolName, se
                     </form>
                 )}
                 {educations.length !== 0 && 
-                    <ul className="edu-items-container">
+                    <ul className="items-container">
                     {educations.map((education, index) =>
-                        <li className="edu-items" key={index}>
-                            <div className="edu-item-name">{education.schoolName}</div>
-                            <button onClick={() => handleEdit(index)}>Edit</button>
-                            <button onClick={() => handleDelete(index)}>Del</button>
+                        <li className="list-items" key={index}>
+                             <div className="item-name">{education.schoolName}</div>
+                            
+                            <div className="edu-buttons2">
+                                <button className="edit-btn" onClick={() => handleEdit(index)}><img className="edu-edit-icon" src="../public/tools.svg"/></button>
+                                <button className="delete-btn" onClick={() => handleDelete(index)}><img className="edu-del-icon" src="../public/trashCan.svg"/></button>
+                            </div>
+                            
                         </li>)}
                 </ul>
                 }

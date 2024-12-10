@@ -57,7 +57,7 @@ export default function GeneralInputComponent({ name, setName, email, setEmail, 
                     value={address}
                     placeholder="Enter your address"/>
             </label>
-            <button onClick={handleSave}>Save</button>
+            <button onClick={handleSave} className="save-button" >Save</button>
            
         </form>
     )
