@@ -22,7 +22,7 @@ export default function SkillsInput({ skills, setSkills, skillName, setSkillName
     }
 
     return (
-        <form>
+        <form className="edu-form">
             <div className="skills-header">
                 <img className="mini-icon" src="../public/tools.svg"/>
                  <h1>Skills</h1>

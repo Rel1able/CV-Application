@@ -31,6 +31,11 @@
     padding-bottom: 2rem;
 }
 
+.skills-header > h1{
+    position: relative;
+    right: 1rem;
+}
+
 .skills-header > *{
     position: relative;
     top: 1rem;
@@ -52,6 +57,7 @@
     justify-content: space-between;
     padding-top: 1.5rem;
     padding-bottom: 1rem;
+    color:rgba(47, 47, 47, 0.758);;
 }
 
 .skills-del-button{

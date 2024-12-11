@@ -85,7 +85,7 @@ export default function ProfExpInputs({experiences, setExperiences, company, set
     }
 
     return (
-        <div>
+        <div className="edu-form">
             <div className="profexp-input-header">
                 <img className="mini-icon" src="../public/jobExpIcon.svg"/>
                 <h2>Career</h2>

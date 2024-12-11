@@ -203,3 +203,153 @@ li{
     position: relative;
     bottom: 1rem;
 }
+
+
+
+@media (max-width: 479px){
+    .general-info-container{
+        flex-direction: column;
+        gap: 2rem;
+        width: 250%;
+        
+        
+    }
+    .inputs-data{
+        margin-left: 0px;
+        
+        justify-content: center;
+        align-items: center;
+    }
+    .header{
+        width: 250%;
+    }
+    .display-data{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+
+
+}
+
+@media (min-width: 480px) and (max-width: 767px){
+    body{
+        font-size: 2rem;
+    }
+     .general-info-container{
+        flex-direction: column;
+        gap: 2rem;
+        width: 250%;
+        
+        
+    }
+    .inputs-data{
+        margin-left: 0px;
+        
+        justify-content: center;
+        align-items: center;
+    }
+    .general-divs{
+        width: 50rem !important;
+    }
+    .general-inputs{
+        width: 50rem !important;
+        font-size: 2rem;
+    }
+    .edu-form{
+        width: 52rem !important;
+        font-size: 2.5rem;
+    }
+    .input-label > input{
+        width: 30rem;
+        height: 2rem;
+        font-size: 1.5rem;
+    }
+    .header{
+        width: 250%;
+    }
+    .display-data{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .save-button{
+        width: 15rem;
+        height: 4rem;
+        font-size: 2.5rem;
+        
+    }
+    .div-icon{
+        width: 4.5rem;
+    }
+    .swap-icon, .plus-icon, .delete-btn, .edit-btn{
+        width: 4.5rem;
+        
+    }
+    .plus-icon, .delete-btn, .edit-btn{
+        height: 5rem;
+    }
+    .mini-icon{
+        width: 4.5rem;
+    }
+
+    .skill-name{
+        font-size: 3rem !important;
+    }
+    .skills-del-button > button{
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .skills-data-container > h1{
+        font-size: 3rem;
+    }
+
+    .skills-data-container > input{
+        width: 30rem;
+        height: 2rem;
+        font-size: 1.8rem;
+    }
+    .edu-buttons2{
+        position: relative;
+        left: 5rem !important;
+        gap: 2.5rem !important;
+    }
+    .skills-display{
+       
+        margin-bottom: 5rem;
+    }
+    .display-data{
+        height: 100%;
+       
+    }
+    .icon{
+        width: 4rem;
+
+    }
+    .general-icons > h3{
+        display: flex;
+        align-items: center;
+    }
+    .section-name{
+        font-size: 3rem;
+    }
+    .edu-line1, .profExp-line{
+        font-size: 2.5rem;
+    }
+    .school-name, .company-name{
+        font-size: 3rem;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+
+}
+
+@media (min-width: 1200px){
+
+}
