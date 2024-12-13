@@ -53,7 +53,8 @@ export default function ProfExpInputs({experiences, setExperiences, company, set
     }
 
 
-    function handleSave() {
+    function handleSave(e) {
+        e.preventDefault();
         const newExperience = { company, jobTitle, profStartDate, profEndDate };
         if (editingIndex !== null) {
             let updatedExperiences = [...experiences];
@@ -113,7 +114,7 @@ export default function ProfExpInputs({experiences, setExperiences, company, set
                 End date
                 <input type="text" value={profEndDate} onChange={handleEndDate} placeholder="Enter the end date"/>
             </label>
-            <button className="save-button"  onClick={handleSave}>Save</button>
+            <button className="save-button"  onClick={e => handleSave(e)}>Save</button>
                 </form>}
             
             <ul className="items-container">

@@ -1,6 +1,7 @@
-export default function CloseButton({ setIsEditing}){
+export default function CloseButton({setIsEditing}){
     
-    function handleClose() {
+    function handleClose(e) {
+        e.preventDefault();
         setIsEditing(false);
     }
 

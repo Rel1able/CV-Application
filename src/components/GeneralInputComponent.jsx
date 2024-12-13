@@ -20,7 +20,8 @@ export default function GeneralInputComponent({ name, setName, email, setEmail, 
         setAddress(e.target.value);
     }
 
-    function handleSave() {
+    function handleSave(e) {
+        e.preventDefault();
         setIsEditing(false);
     }
 
@@ -57,7 +58,7 @@ export default function GeneralInputComponent({ name, setName, email, setEmail, 
                     value={address}
                     placeholder="Enter your address"/>
             </label>
-            <button onClick={handleSave} className="save-button" >Save</button>
+            <button onClick={e => handleSave(e)} className="save-button" >Save</button>
            
         </form>
     )

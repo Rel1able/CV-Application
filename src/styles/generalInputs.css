@@ -52,3 +52,9 @@ input{
     justify-content: center;
     gap: 1rem;
 }
+
+.gen-icon-container{
+    display: flex;
+    
+    align-items: center;
+}

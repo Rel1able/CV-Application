@@ -55,7 +55,8 @@ export default function EducationalInputComponent({ setIsEditing, schoolName, se
         setEndDate("");
     }
 
-    function handleSave() {
+    function handleSave(e) {
+        e.preventDefault();
         const newEducation = { schoolName, titleOfStudy, startDate, endDate };
 
         if (editingIndex !== null) {
@@ -85,9 +86,7 @@ export default function EducationalInputComponent({ setIsEditing, schoolName, se
     }
 
     function handleDelete(index) {
-        let filtered = educations.filter((_, i) => {
-            i !== index;
-        })
+        let filtered = educations.filter((_, i) => i !== index);
         setEducations([...filtered]);
     }
     
@@ -120,7 +119,7 @@ export default function EducationalInputComponent({ setIsEditing, schoolName, se
                             End date
                             <input type="text" value={endDate} onChange={handleEndDateChange} placeholder="Enter the end date" />
                         </label>
-                        <button className="save-button" onClick={handleSave}>Save</button>
+                        <button className="save-button" onClick={e => handleSave(e)}>Save</button>
                     </form>
                 )}
                 {educations.length !== 0 && 
