@@ -17,7 +17,8 @@ export default function SkillsInput({ skills, setSkills, skillName, setSkillName
         setSkills([...filtered]);
     }
 
-    function handleClose() {
+    function handleClose(e) {
+        e.preventDefault();
         setIsEditing(false);
     }
 
@@ -26,7 +27,7 @@ export default function SkillsInput({ skills, setSkills, skillName, setSkillName
             <div className="skills-header">
                 <img className="mini-icon" src="../public/tools.svg"/>
                  <h1>Skills</h1>
-                 <button className="close-skills" onClick={handleClose}><img className="swap-icon" src="../public/closeIcon.svg"/></button>
+                 <button className="close-skills" onClick={e => handleClose(e)}><img className="swap-icon" src="../public/closeIcon.svg"/></button>
             </div>
            
             <label className="skills-data-container">

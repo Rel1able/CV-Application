@@ -1,6 +1,6 @@
 :root{
-    --main-color: #10887a;
-    --secondary-color: #119888;
+    --main-color: #118b7c;
+    --secondary-color: #0e8275;
 }
 
 
@@ -192,8 +192,6 @@ li{
 }
 
 
-
-
 .items-container{
     padding-top: 1rem;
     border: 2px solid gray;
@@ -202,6 +200,13 @@ li{
     position: relative;
     bottom: 1rem;
 }
+
+.right-div{
+    max-width: 30%;
+    position: relative;
+    right: 0.5rem;
+}
+
 
 
 

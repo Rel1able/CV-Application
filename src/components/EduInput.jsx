@@ -93,7 +93,7 @@ export default function EducationalInputComponent({ setIsEditing, schoolName, se
         return (
             <div className="edu-form">
                 <div className="edu-input-header">
-                    <img className="mini-icon" src="../public/eduIcon.svg" />
+                    <img className="mini-icon" src="../eduIcon.svg" />
                     <h2>Education</h2>
                     <div className="header-btns">
                         <button className="plus-btn" onClick={toggleForm}><img className="plus-icon" src="../public/plusIcon.svg" /></button>
@@ -129,8 +129,8 @@ export default function EducationalInputComponent({ setIsEditing, schoolName, se
                              <div className="item-name">{education.schoolName}</div>
                             
                             <div className="edu-buttons2">
-                                <button className="edit-btn" onClick={() => handleEdit(index)}><img className="edu-edit-icon" src="../public/tools.svg"/></button>
-                                <button className="delete-btn" onClick={() => handleDelete(index)}><img className="edu-del-icon" src="../public/trashCan.svg"/></button>
+                                <button className="edit-btn" onClick={() => handleEdit(index)}><img className="edu-edit-icon" src="../tools.svg"/></button>
+                                <button className="delete-btn" onClick={() => handleDelete(index)}><img className="edu-del-icon" src="../trashCan.svg"/></button>
                             </div>
                             
                         </li>)}

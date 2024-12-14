@@ -6,7 +6,7 @@ export default function SwapButton({ setIsEditing }) {
 
     return (
         <button onClick={handleEdit}>
-            <img className="swap-icon" src="../public/swapIcon.svg"/>
+            <img className="swap-icon" src="../swapIcon.svg"/>
         </button>
     )
 }

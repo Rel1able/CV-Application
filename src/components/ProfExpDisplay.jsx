@@ -7,7 +7,7 @@ export default function ProfExpDisplay({experiences}) {
             {experiences.map((experience, index) => (
                 <div key={index} className="profExp-line">
                     <h4 className="date">{experience.profStartDate} - {experience.profEndDate}</h4>
-                    <div>
+                    <div className="right-div">
                         <h4 className="company-name">{experience.company}</h4>
                         <h4 className="job-title">{experience.jobTitle}</h4>
                     </div>

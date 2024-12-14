@@ -28,24 +28,24 @@ export default function GeneralInfo() {
 
     const [name, setName] = useState("Your Name");
     const [email, setEmail] = useState("youremail@gmail.com");
-    const [phone, setPhone] = useState("444-444-444-444");
-    const [address, setAddress] = useState("City Street 4");
+    const [phone, setPhone] = useState("+444-444-444-444");
+    const [address, setAddress] = useState("City Street 444");
   
-    const [schoolName, setSchoolName] = useState("Harvard University");
-    const [titleOfStudy, setTitleOfStudy] = useState("Bachelor Computer Science");
-    const [startDate, setStartDate] = useState("09.11");
-    const [endDate, setEndDate] = useState("09.15");
+    const [schoolName, setSchoolName] = useState("");
+    const [titleOfStudy, setTitleOfStudy] = useState("");
+    const [startDate, setStartDate] = useState("");
+    const [endDate, setEndDate] = useState("");
 
-    const [company, setCompany] = useState("Google");
-    const [ jobTitle, setJobTitle]  = useState("Software Engineer");
-    const [profStartDate, setProfStartDate] = useState("01.16");
-    const [profEndDate, setProfEndDate] = useState("present");
+    const [company, setCompany] = useState("");
+    const [ jobTitle, setJobTitle]  = useState("");
+    const [profStartDate, setProfStartDate] = useState("");
+    const [profEndDate, setProfEndDate] = useState("");
 
-    const [educations, setEducations] = useState([{schoolName: "Harvard University", titleOfStudy: "Bachelor Computer Science", startDate: "01.12.2024", endDate: "01.12.2028"}]);
-    const [experiences, setExperiences] = useState([{ company: "Google", jobTitle: "Software Engineer", profStartDate: "01.16", profEndDate: "present" }]);
+    const [educations, setEducations] = useState([{schoolName: "University", titleOfStudy: "Bachelor Computer Science", startDate: "04.04.2024", endDate: "07.07.2027"}]);
+    const [experiences, setExperiences] = useState([{ company: "Company", jobTitle: "Software Engineer", profStartDate: "07.04", profEndDate: "present" }]);
 
     const [skillName, setSkillName] = useState("");
-    const [skills, setSkills] = useState(["Html", "Css", "JAva Script"]);
+    const [skills, setSkills] = useState(["Html", "Css", "Java Script", "React", "Git"]);
     const [isEditingSkills, setIsEditingSkills] = useState(false);
 
     return (

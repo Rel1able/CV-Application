@@ -8,6 +8,11 @@
 .skills-list{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    
+}
+
+.skills-list h3{
+    font-family: serif, sans-serif !important;
 }
 
 .skills-data-container{
