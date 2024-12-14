@@ -6,6 +6,6 @@ export default function CloseButton({setIsEditing}){
     }
 
     return (
-        <button onClick={handleClose}><img className="swap-icon" src="../public/closeIcon.svg"/></button>
+        <button onClick={handleClose}><img className="swap-icon" src="/closeIcon.svg"/></button>
     )
 }

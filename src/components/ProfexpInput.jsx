@@ -88,11 +88,11 @@ export default function ProfExpInputs({experiences, setExperiences, company, set
     return (
         <div className="edu-form">
             <div className="profexp-input-header">
-                <img className="mini-icon" src="../public/jobExpIcon.svg"/>
+                <img className="mini-icon" src="/jobExpIcon.svg"/>
                 <h2>Career</h2>
                 <div className="header-btns">
-                    <button className="plus-btn" onClick={toggleForm}><img className="plus-icon" src="../public/plusIcon.svg" /></button>
-                    <button onClick={handleClose}><img className="swap-icon" src="../public/closeIcon.svg"/></button>
+                    <button className="plus-btn" onClick={toggleForm}><img className="plus-icon" src="/plusIcon.svg" /></button>
+                    <button onClick={handleClose}><img className="swap-icon" src="/closeIcon.svg"/></button>
                 </div>
                 
             </div>
@@ -122,8 +122,8 @@ export default function ProfExpInputs({experiences, setExperiences, company, set
                     <li className="list-items" key={index}>
                         <div className="item-name">{experience.jobTitle}</div>
                         <div className="edu-buttons2">
-                            <button className="edit-btn" onClick={() => handleEdit(index)}><img className="edu-edit-icon" src="../public/tools.svg"/></button>
-                            <button className="delete-btn" onClick={() => handleDelete(index)}><img className="edu-del-icon" src="../public/trashCan.svg"/></button>
+                            <button className="edit-btn" onClick={() => handleEdit(index)}><img className="edu-edit-icon" src="/tools.svg"/></button>
+                            <button className="delete-btn" onClick={() => handleDelete(index)}><img className="edu-del-icon" src="/trashCan.svg"/></button>
                         </div>
                     </li>)}
             </ul>

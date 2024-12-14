@@ -29,7 +29,7 @@ export default function GeneralInputComponent({ name, setName, email, setEmail, 
     return (
         
         <form className="general-inputs">
-            <h1 name="section-icon"><img className="div-icon" src="../userIcon.svg" />General Information<CloseButton setIsEditing={setIsEditing} /></h1>
+            <h1 name="section-icon"><img className="div-icon" src="/userIcon.svg" />General Information<CloseButton setIsEditing={setIsEditing} /></h1>
             <label className="input-label">
                 Name
                 <input type="text"
