@@ -1,12 +1,16 @@
 import GeneralInfo from "./components/GeneralInfo";
 import './App.css'
 
+
 function App() {
+
   return (
-    <main>
-      <GeneralInfo />
-      
-    </main>
+    <>
+      <main>
+        <GeneralInfo />
+      </main>
+    </>
+    
   )
 }
 

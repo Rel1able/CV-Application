@@ -19,9 +19,14 @@ import SkillsInput from "./SkillsInput.jsx";
 
 import Header from "./Header.jsx";
 
+import { usePDF } from "react-to-pdf";
+
 import { useState } from "react";
 
 export default function GeneralInfo() {
+    const { toPDF, targetRef } = usePDF({ filename: "cv.pdf" });
+    
+
     const [isEditing, setIsEditing] = useState(false);
     const [isEditingEdu, setIsEditingEdu] = useState(false);
     const [isEditingProf, setIsEditingProf] = useState(false);
@@ -50,9 +55,10 @@ export default function GeneralInfo() {
 
     return (
         <>
-            <Header/>
-        <div className="general-info-container">
-            <div className="inputs-data">
+            <Header />
+            
+            <div className="general-info-container">
+                <div className="inputs-data">
                     {isEditing ? <GeneralInputComponent name={name} setName={setName}
                         email={email} setEmail={setEmail}
                         phone={phone} setPhone={setPhone}
@@ -83,16 +89,21 @@ export default function GeneralInfo() {
                         :  <SkillsDivComp setIsEditing={setIsEditingSkills}/>}
                     
                 
-            </div>
-            <div className="display-data">
-                <GeneralDisplayComponent name={name} email={email} phone={phone} address={address} />
-                <EduDisplayComponent educations={educations} />
-                <ProfExpDisplay experiences={experiences} />
-                <SkillsDisplay skills={skills}/>
-            </div>
+                </div>
+                   
+                        <div className="display-data"  ref={targetRef}>
+                            <GeneralDisplayComponent name={name} email={email} phone={phone} address={address} />
+                            <EduDisplayComponent educations={educations} />
+                            <ProfExpDisplay experiences={experiences} />
+                            <SkillsDisplay skills={skills}/>
+                        </div>
+                        
+                   
+                    
+               
             
-            
             </div>
+            <button className="download-button" onClick={() => toPDF()}>Download as PDF</button>
         </>
         
     )
